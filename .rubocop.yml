@@ -1,0 +1,14 @@
+AbcSize:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 120
+
+MethodLength:
+  Max: 15
+
+SpaceAfterControlKeyword:
+  Enabled: true
