@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'methadone'
+require 'public_ip'
+
+class App
+  include Methadone::Main
+  include Methadone::CLILogging
+
+  main do |service|
+    if options['list-services']
+      list_of_services = PublicIp.list_services.map do |service_symbol, service_class|
+        "#{service_symbol} (#{service_class.uri})"
+      end.join("\n")
+
+      puts "The available services are:\n#{list_of_services}"
+      puts 'You may pick a service and run public_ip [service] to get your IP address from that service'
+    else
+      begin
+        service = service.nil? ? :random : service.to_sym
+        ip = PublicIp.get_ip(service: service)
+        puts ip
+      rescue PublicIp::UnknownService => e
+        puts e.message
+        puts 'To see a list of available services use: public_ip --list-services'
+        exit 1
+      end
+    end
+  end
+
+  description 'Find out what is your public internet IP address'
+
+  on('-l', '--list-services', 'List available services')
+  on('-l', '--list-services', 'List available services')
+
+  arg :service, :optional
+
+  version PublicIp::VERSION
+
+  go!
+end

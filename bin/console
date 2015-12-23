@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'public_ip'
+require 'pry'
+
+Pry.start
