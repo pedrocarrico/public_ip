@@ -4,7 +4,7 @@ module PublicIp
   module Service
     class MatchedExpressionService < MatchedExpression
       def self.uri
-        URI('http://wwwexample.com')
+        URI('http://www.example.com')
       end
 
       def self.headers
