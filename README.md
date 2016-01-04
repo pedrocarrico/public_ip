@@ -1,6 +1,6 @@
 # PublicIp
 
-[![Build Status](https://secure.travis-ci.org/pedrocarrico/public_ip.png)](http://travis-ci.org/pedrocarrico/public_ip) [![Dependency Status](https://gemnasium.com/pedrocarrico/public_ip.png?travis)](https://gemnasium.com/pedrocarrico/public_ip) [![Gem Version](https://badge.fury.io/rb/public_ip.png)](http://badge.fury.io/rb/public_ip) [![Code Climate](https://codeclimate.com/github/pedrocarrico/public_ip/badges/gpa.svg)](https://codeclimate.com/github/pedrocarrico/public_ip)
+[![Build Status](https://secure.travis-ci.org/pedrocarrico/public_ip.png)](http://travis-ci.org/pedrocarrico/public_ip) [![Dependency Status](https://gemnasium.com/pedrocarrico/public_ip.png?travis)](https://gemnasium.com/pedrocarrico/public_ip) [![Gem Version](https://badge.fury.io/rb/public_ip.png)](http://badge.fury.io/rb/public_ip) [![Code Climate](https://codeclimate.com/github/pedrocarrico/public_ip/badges/gpa.svg)](https://codeclimate.com/github/pedrocarrico/public_ip) [![Test Coverage](https://codeclimate.com/github/pedrocarrico/public_ip/badges/coverage.svg)](https://codeclimate.com/github/pedrocarrico/public_ip/coverage)
 
 Ever questioned what is your public internet IP and you've forgotten how to do it.
 Instead of remembering every service that you can query to get your public internet IP you can use this gem.
