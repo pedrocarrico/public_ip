@@ -29,7 +29,9 @@ module PublicIp
       def self.perform_request
         Timeout.timeout(PublicIp::TIMEOUT_IN_SECS) do
           request = Net::HTTP::Get.new(uri, headers)
-          Net::HTTP.start(uri.host, uri.port) { |http| http.request(request) }
+          http = Net::HTTP.new(uri.host, uri.port)
+          http.use_ssl = (uri.scheme == 'https')
+          http.request(request)
         end
       end
     end
