@@ -1,6 +1,7 @@
 require 'public_ip/service/registry'
 require 'public_ip/service/registrable'
 require 'public_ip/service/simple'
+require 'public_ip/service/parsed_html'
 require 'public_ip/service/plain'
 require 'public_ip/service/matched_expression'
 

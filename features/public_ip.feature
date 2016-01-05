@@ -26,10 +26,14 @@ Feature: PublicIp CLI application
       i_can_haz_ip (http://icanhazip.com)
       ident_me (http://ident.me)
       ifconfig_me (http://ifconfig.me/ip)
+      ip_chicken (http://www.ipchicken.com/)
       ip_echo (http://ipecho.net/plain)
       ip_info (http://ipinfo.io/ip)
       ip_ogre (http://ipogre.com)
+      mx_toolbox (http://mxtoolbox.com/WhatIsMyIP/)
+      private_internet_access (https://www.privateinternetaccess.com/pages/whats-my-ip/)
       smart_ip (http://smart-ip.net/myip)
+      what_is_my_ip (https://www.whatismyip.com/)
       what_is_my_ip_address (http://bot.whatismyipaddress.com)
       You may pick a service and run public_ip [service] to get your IP address from that service
       """
