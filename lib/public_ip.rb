@@ -4,6 +4,7 @@ require 'public_ip/service/simple'
 require 'public_ip/service/parsed_html'
 require 'public_ip/service/plain'
 require 'public_ip/service/matched_expression'
+require 'public_ip/service/json_type'
 
 require 'public_ip/version'
 

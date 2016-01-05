@@ -10,7 +10,7 @@ class App
 
   main do |service|
     if options['list-services']
-      list_of_services = PublicIp.list_services.map do |service_symbol, service_class|
+      list_of_services = PublicIp.list_services.sort.map do |service_symbol, service_class|
         "#{service_symbol} (#{service_class.uri})"
       end.join("\n")
 
