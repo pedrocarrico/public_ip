@@ -26,6 +26,7 @@ Feature: PublicIp CLI application
       i_can_haz_ip (http://icanhazip.com)
       ident_me (http://ident.me)
       ifconfig_me (http://ifconfig.me/ip)
+      ip_api (http://ip-api.com/json)
       ip_chicken (http://www.ipchicken.com/)
       ip_echo (http://ipecho.net/plain)
       ip_info (http://ipinfo.io/ip)
