@@ -33,7 +33,7 @@ Feature: PublicIp CLI application
       ip_info (http://ipinfo.io/ip)
       ip_ogre (http://ipogre.com)
       ipify (http://api.ipify.org/?format=json)
-      mx_toolbox (http://mxtoolbox.com/WhatIsMyIP/)
+      mx_toolbox (https://api.mxtoolbox.com/api/v1/utils/whatsmyip)
       private_internet_access (https://www.privateinternetaccess.com/pages/whats-my-ip/)
       smart_ip (http://smart-ip.net/myip)
       what_is_my_ip (https://www.whatismyip.com/)

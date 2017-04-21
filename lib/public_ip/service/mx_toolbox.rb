@@ -2,13 +2,9 @@ require 'nokogiri'
 
 module PublicIp
   module Service
-    class MxToolbox < ParsedHTML
+    class MxToolbox < Plain
       def self.uri
-        URI('http://mxtoolbox.com/WhatIsMyIP/')
-      end
-
-      def self.parse_ip_address(response_body)
-        Nokogiri::HTML(response_body).css('#ctl00_ContentPlaceHolder1_hlIP').text
+        URI('https://api.mxtoolbox.com/api/v1/utils/whatsmyip')
       end
     end
   end
