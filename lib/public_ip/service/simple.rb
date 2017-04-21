@@ -1,12 +1,27 @@
 require 'net/http'
 require 'timeout'
+require 'ipaddress'
 
 module PublicIp
   module Service
+    class InvalidIpAddress < StandardError; end
     class TimedOut < StandardError; end
+
     class Simple
       attr_reader :uri
       attr_reader :headers
+
+      def self.ip
+        response = perform_request
+
+        ip_address = extract_ip(response)
+
+        unless IPAddress.valid?(ip_address)
+          raise PublicIp::Service::InvalidIpAddress, "#{ip_address} is not a valid ip address"
+        end
+
+        ip_address
+      end
 
       def self.uri
         raise 'Not implemented'

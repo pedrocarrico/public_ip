@@ -23,7 +23,7 @@ module PublicIp
     else
       PublicIp::Service::Registry[service].ip
     end
-  rescue PublicIp::Service::TimedOut
+  rescue PublicIp::Service::TimedOut, PublicIp::Service::InvalidIpAddress
     tries -= 1
     retry if tries.positive? && service == :random
 
