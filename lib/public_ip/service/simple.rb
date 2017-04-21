@@ -3,6 +3,7 @@ require 'timeout'
 
 module PublicIp
   module Service
+    class TimedOut < StandardError; end
     class Simple
       attr_reader :uri
       attr_reader :headers
@@ -27,7 +28,7 @@ module PublicIp
       end
 
       def self.perform_request
-        Timeout.timeout(PublicIp::TIMEOUT_IN_SECS) do
+        Timeout.timeout(PublicIp::TIMEOUT_IN_SECS, PublicIp::Service::TimedOut) do
           request = Net::HTTP::Get.new(uri, headers)
           http = Net::HTTP.new(uri.host, uri.port)
           http.use_ssl = (uri.scheme == 'https')
