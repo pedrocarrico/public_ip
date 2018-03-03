@@ -32,7 +32,6 @@ class App
   description 'Find out what is your public internet IP address'
 
   on('-l', '--list-services', 'List available services')
-  on('-l', '--list-services', 'List available services')
 
   arg :service, :optional
 
