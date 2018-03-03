@@ -22,6 +22,7 @@ Feature: PublicIp CLI application
       The available services are:
       akamai (http://whatismyip.akamai.com)
       amazon_aws (http://checkip.amazonaws.com)
+      curl_my_ip (http://curlmyip.net/)
       dyndns (http://checkip.dyndns.org)
       i_can_haz_ip (http://icanhazip.com)
       ident_me (http://ident.me)
