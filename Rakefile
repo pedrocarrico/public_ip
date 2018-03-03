@@ -12,4 +12,4 @@ RuboCop::RakeTask.new(:rubocop)
 
 RSpec::Core::RakeTask.new(:spec)
 
-task default: [:spec, :features, :rubocop]
+task default: %i[spec features rubocop]

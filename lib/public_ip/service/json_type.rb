@@ -6,7 +6,7 @@ module PublicIp
       extend PublicIp::Service::Registrable
 
       def self.parse_json(_json_data)
-        fail 'Not implemented'
+        raise 'Not implemented'
       end
 
       def self.ip

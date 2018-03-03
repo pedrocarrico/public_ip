@@ -8,7 +8,7 @@ module PublicIp
       attr_reader :headers
 
       def self.uri
-        fail 'Not implemented'
+        raise 'Not implemented'
       end
 
       def self.headers

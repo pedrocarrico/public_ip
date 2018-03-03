@@ -8,9 +8,8 @@ module PublicIp
       attr_reader :service_database
 
       def self.register_service(service_class)
-        unless instance.service_database.key?(service_class.symbol)
-          instance.service_database[service_class.symbol] = service_class
-        end
+        return if instance.service_database.key?(service_class.symbol)
+        instance.service_database[service_class.symbol] = service_class
       end
 
       def self.[](service)

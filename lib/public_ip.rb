@@ -26,11 +26,9 @@ module PublicIp
     end
   rescue Timeout::Error
     tries -= 1
-    if tries > 0 && service == :random
-      retry
-    else
-      raise PublicIp::TimedOut, 'Took too long to get your public ip address, try with another service'
-    end
+    retry if tries > 0 && service == :random
+
+    raise PublicIp::TimedOut, 'Took too long to get your public ip address, try with another service'
   end
 
   def list_services

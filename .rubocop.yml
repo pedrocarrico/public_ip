@@ -10,5 +10,8 @@ LineLength:
 MethodLength:
   Max: 15
 
-SpaceAfterControlKeyword:
+SpaceAroundKeyword:
   Enabled: true
+
+AllCops:
+  DisplayCopNames: true
