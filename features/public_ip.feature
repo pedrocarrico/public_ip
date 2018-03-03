@@ -31,7 +31,6 @@ Feature: PublicIp CLI application
       ip_chicken (http://www.ipchicken.com/)
       ip_echo (http://ipecho.net/plain)
       ip_info (http://ipinfo.io/ip)
-      ip_ogre (http://ipogre.com)
       ipify (http://api.ipify.org/?format=json)
       mx_toolbox (https://api.mxtoolbox.com/api/v1/utils/whatsmyip)
       private_internet_access (https://www.privateinternetaccess.com/pages/whats-my-ip/)
