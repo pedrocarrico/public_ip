@@ -15,3 +15,4 @@ SpaceAroundKeyword:
 
 AllCops:
   DisplayCopNames: true
+  TargetRubyVersion: 2.1
