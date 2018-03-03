@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'methadone', '~> 1.9.2'
   spec.add_dependency 'nokogiri', '~> 1.8.1'
 
-  spec.add_development_dependency 'aruba', '~> 0.11.2'
+  spec.add_development_dependency 'aruba', '~> 0.14.3'
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'pry', '~> 0.10.3'
   spec.add_development_dependency 'rake', '~> 10.0'
