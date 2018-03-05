@@ -3,10 +3,8 @@ module PublicIp
     class Plain < Simple
       extend PublicIp::Service::Registrable
 
-      def self.ip
-        response = perform_request
-
-        response.body.strip
+      def self.extract_ip(response)
+        response.body.strip.delete('"')
       end
     end
   end

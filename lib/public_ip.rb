@@ -13,7 +13,6 @@ module PublicIp
   TIMEOUT_IN_SECS = 3
 
   class UnknownService < StandardError; end
-  class TimedOut < StandardError; end
 
   module_function
 
@@ -24,11 +23,11 @@ module PublicIp
     else
       PublicIp::Service::Registry[service].ip
     end
-  rescue Timeout::Error
+  rescue PublicIp::Service::TimedOut, PublicIp::Service::InvalidIpAddress
     tries -= 1
     retry if tries.positive? && service == :random
 
-    raise PublicIp::TimedOut, 'Took too long to get your public ip address, try with another service'
+    raise
   end
 
   def list_services

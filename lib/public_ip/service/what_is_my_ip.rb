@@ -12,7 +12,9 @@ module PublicIp
       end
 
       def self.parse_ip_address(response_body)
-        Nokogiri::HTML(response_body).css('.ip div').text
+        doc = Nokogiri::HTML(response_body).at('h3:contains("Your Public IPv4 is: ")')
+
+        return doc.text.strip.sub('Your Public IPv4 is: ', '') unless doc.nil?
       end
     end
   end

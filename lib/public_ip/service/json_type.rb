@@ -9,9 +9,7 @@ module PublicIp
         raise 'Not implemented'
       end
 
-      def self.ip
-        response = perform_request
-
+      def self.extract_ip(response)
         parse_json(JSON.parse(response.body.strip))
       end
     end
