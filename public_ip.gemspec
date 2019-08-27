@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'ipaddress', '~> 0.8.3'
   spec.add_dependency 'methadone', '~> 1.9.2'
-  spec.add_dependency 'nokogiri', '~> 1.8.1'
+  spec.add_dependency 'nokogiri', '~> 1.10.4'
 
   spec.add_development_dependency 'aruba', '~> 0.14.3'
   spec.add_development_dependency 'bundler', '~> 1.10'
